@@ -1,0 +1,43 @@
+{
+    "name": "everton3x/repo-skel-php",
+    "description": "Modelo de repositório PHP",
+    "type": "template",
+    "require-dev": {
+        "php-tool-kit/exceptlion": "dev-master",
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "*",
+        "phpmd/phpmd": "*",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer": "*",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Everton da Rosa",
+            "email": "everton3x@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Namespace\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --coverage-html=reports/coverage --whitelist=src --testdox-html=reports/testdox.html --colors=auto --testdox --no-configuration tests",
+        "fix-code": "vendor/bin/php-cs-fixer fix --rules=@PSR1 --format=txt --ansi src",
+        "check-code": "vendor/bin/phpcs -p --colors --report=summary --report-full=reports/code-fix.html --standard=PSR1,PSR12 src",
+        "format-code": "vendor/bin/phpcbf -p --standard=PSR1,PSR12 src",
+        "copy-paste-detect": "vendor/bin/phpcpd --fuzzy --ansi src",
+        "mess-detect": "vendor/bin/phpmd src ansi cleancode,codesize,controversial,design,naming,unusedcode",
+        "static-analyse": "vendor/bin/phpstan analyse --level=8 --ansi src",
+        "fix": ["@format-code", "@check-code"],
+        "cpd": "@copy-paste-detect",
+        "mess": "@mess-detect",
+        "stan": "@static-analyse"
+    }
+}
