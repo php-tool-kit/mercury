@@ -1,9 +1,8 @@
 {
-    "name": "everton3x/repo-skel-php",
-    "description": "Modelo de repositório PHP",
+    "name": "php-tool-kit/mercury",
+    "description": "Sistema de log/mensagens.",
     "type": "template",
     "require-dev": {
-        "php-tool-kit/exceptlion": "dev-master",
         "phpunit/phpunit": "*",
         "phpstan/phpstan": "*",
         "phpmd/phpmd": "*",
@@ -20,11 +19,14 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": ">=7.4.3"
+        "php": ">=7.4.3",
+        "psr/log": "^1.1",
+        "php-tool-kit/uid": "dev-master",
+        "php-tool-kit/exceptlion": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Namespace\\": "src"
+            "PTK\\Mercury\\": "src"
         }
     },
     "scripts": {
