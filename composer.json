@@ -17,7 +17,7 @@
             "email": "everton3x@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.3",
         "psr/log": "^1.1",
@@ -40,6 +40,7 @@
         "fix": ["@format-code", "@check-code"],
         "cpd": "@copy-paste-detect",
         "mess": "@mess-detect",
-        "stan": "@static-analyse"
+        "stan": "@static-analyse",
+        "doc": "php phpDocumentor.phar run --target=docs --directory=src --title='Mercury Log Helper' --defaultpackagename=PTK\\Mercury --sourcecode --progressbar --parseprivate"
     }
 }
