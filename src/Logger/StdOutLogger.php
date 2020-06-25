@@ -1,4 +1,5 @@
 <?php
+
 /*
  * The MIT License
  *
@@ -90,18 +91,24 @@ class StdOutLogger implements \Psr\Log\LoggerInterface
                 ]);
         }*/
 //        print_r($context);exit;
-        if($context){
+        if ($context) {
             $message = $this->applyContext($message, $context);
         }
 
 //        fwrite($handle, $message);
-        echo $message;
+        printf("[%s]\t%s", $level, $message);
     }
-    
+
+/**
+ *
+ * @param string $message
+ * @param array<mixed> $context
+ * @return string
+ */
     protected function applyContext(string $message, array $context): string
     {
-        foreach ($context as $key => $value){
-            $message = str_replace('{'.$key.'}', $value, $message);
+        foreach ($context as $key => $value) {
+            $message = str_replace('{' . $key . '}', $value, $message);
         }
         
         return $message;

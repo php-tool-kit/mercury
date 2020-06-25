@@ -41,7 +41,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[alert]\tHello world");
         $logger->alert($message);
     }
     
@@ -51,7 +51,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[critical]\tHello world");
         $logger->critical($message);
     }
     
@@ -61,7 +61,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[debug]\tHello world");
         $logger->debug($message);;
     }
     
@@ -71,7 +71,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[emergency]\tHello world");
         $logger->emergency($message);
     }
 
@@ -81,7 +81,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[error]\tHello world");
         $logger->error($message);
     }
 
@@ -91,7 +91,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[info]\tHello world");
         $logger->info($message);
     }
 
@@ -101,7 +101,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[notice]\tHello world");
         $logger->notice($message);
     }
 
@@ -111,7 +111,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[warning]\tHello world");
         $logger->warning($message);
     }
     
@@ -121,7 +121,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
+        $this->expectOutputString("[info]\tHello world");
         $logger->log(\Psr\Log\LogLevel::INFO, $message);
     }
     
@@ -131,7 +131,7 @@ class StdOutLoggerTest extends PHPUnit\Framework\TestCase
 
         $message = '{token1} {token2} test';
         
-        $this->expectOutputString('hello world test');
+        $this->expectOutputString("[info]\thello world test");
         $logger->log(\Psr\Log\LogLevel::INFO, $message, [
             'token1' => 'hello',
             'token2' => 'world'

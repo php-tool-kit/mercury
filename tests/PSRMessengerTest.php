@@ -159,8 +159,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->alert($message);
+        $this->expectOutputString("[alert]\tHello world");
+        $messenger->sendAlert($message);
     }
     
     public function testCritical()
@@ -173,8 +173,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->critical($message);
+        $this->expectOutputString("[critical]\tHello world");
+        $messenger->sendCritical($message);
     }
     
     public function testDebugActive()
@@ -187,8 +187,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->debug($message);
+        $this->expectOutputString("[debug]\tHello world");
+        $messenger->sendDebug($message);
     }
     
     public function testDebugInactive()
@@ -202,7 +202,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString('');
-        $messenger->debug($message);
+        $messenger->sendDebug($message);
     }
     
     public function testEmergency()
@@ -215,8 +215,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->emergency($message);
+        $this->expectOutputString("[emergency]\tHello world");
+        $messenger->sendEmergency($message);
     }
 
     public function testError()
@@ -229,8 +229,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->error($message);
+        $this->expectOutputString("[error]\tHello world");
+        $messenger->sendError($message);
     }
 
     public function testInfo()
@@ -243,8 +243,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->info($message);
+        $this->expectOutputString("[info]\tHello world");
+        $messenger->sendInfo($message);
     }
 
     public function testNotice()
@@ -257,8 +257,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->notice($message);
+        $this->expectOutputString("[notice]\tHello world");
+        $messenger->sendNotice($message);
     }
 
     public function testWarning()
@@ -271,8 +271,8 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         
         $message = 'Hello world';
         
-        $this->expectOutputString($message);
-        $messenger->warning($message);
+        $this->expectOutputString("[warning]\tHello world");
+        $messenger->sendWarning($message);
     }
 
 }
