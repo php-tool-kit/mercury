@@ -24,11 +24,6 @@
  * THE SOFTWARE.
  */
 
-/**
- * Definição de PSRMessenger.
- * 
- * @package PTK\Mercury
- */
 namespace PTK\Mercury;
 
 use Psr\Log\LoggerInterface;
