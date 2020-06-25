@@ -1,0 +1,305 @@
+\hypertarget{classPTK_1_1Mercury_1_1PSRMessenger}{}\doxysection{Referência da Classe P\+TK\textbackslash{}Mercury\textbackslash{}P\+S\+R\+Messenger}
+\label{classPTK_1_1Mercury_1_1PSRMessenger}\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a25e557b46e9e08c4eb7955b269a36c7a}{\+\_\+\+\_\+construct}} (array \$environment=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a50c0d6170b822841d3c55e20fc258fff}{register\+Logger}} (Logger\+Interface \$logger, string \$logger\+Id=\textquotesingle{}\textquotesingle{})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_af0315299ebab5499ef6e9d483e6d9873}{list\+Loggers}} ()
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a88a2e5866477b0d7e953d6a4465fa995}{unregister\+Logger}} (string \$logger\+Id)
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_ac66e973353e6781a6509bed595b3cc94}{get\+Logger}} (string \$logger\+Id)
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_acdedc277bf16469968414d40d57e8ac4}{has\+Logger}} (string \$logger\+Id)
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a2fa6c9bfc00e51f2b47163a49f006c87}{send\+Alert}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_aa2bc99e61d321a9da6f0cd05e1d2a882}{send\+Critical}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a8c93e6fda7d2ddfd378ff6664a914094}{send\+Debug}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a9d28375cb4a65ce29af4ef902a143701}{send\+Emergency}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a2dc390f64810054d278e9ba6d521c6c4}{send\+Error}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a4b517dfb795eee0bd10fb8f25b1df28d}{send\+Info}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_ae08d5c0ec5f473f1a606040e5da13c63}{send\+Notice}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a8828113f658f12f3d8f002f70dd6fe67}{send\+Warning}} (\$message, array \$context=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Membros Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger_a0dd3db7cc140196a6df119c5c114701c}{notify}} (string \$level, \$message, array \$context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Mensageiro do Mercury baseado na P\+S\+R3.
+
+Responsável por gerenciar o recebimento/envio de mensagens aos diferentes loggers.
+
+\begin{DoxyAuthor}{Autor}
+Everton 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a25e557b46e9e08c4eb7955b269a36c7a}\label{classPTK_1_1Mercury_1_1PSRMessenger_a25e557b46e9e08c4eb7955b269a36c7a}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{array}]{\$environment = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em array$<$mixed$>$} & \$environment Conjunto de variáveis de ambiente do messenger. Um exemplo é a variável D\+E\+B\+UG = true$\vert$false, que ativa e desativa o debug. As chaves (array keys) sempre devem estar em maíuscula. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_ac66e973353e6781a6509bed595b3cc94}\label{classPTK_1_1Mercury_1_1PSRMessenger_ac66e973353e6781a6509bed595b3cc94}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!getLogger@{getLogger}}
+\index{getLogger@{getLogger}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{getLogger()}{getLogger()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::get\+Logger (\begin{DoxyParamCaption}\item[{string}]{\$logger\+Id }\end{DoxyParamCaption})}
+
+Retorna um logger específico.
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+string & {\em \$logger\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Logger\+Interface 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_acdedc277bf16469968414d40d57e8ac4}\label{classPTK_1_1Mercury_1_1PSRMessenger_acdedc277bf16469968414d40d57e8ac4}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!hasLogger@{hasLogger}}
+\index{hasLogger@{hasLogger}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{hasLogger()}{hasLogger()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::has\+Logger (\begin{DoxyParamCaption}\item[{string}]{\$logger\+Id }\end{DoxyParamCaption})}
+
+Verifica se um logger está registrado.
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+string & {\em \$logger\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_af0315299ebab5499ef6e9d483e6d9873}\label{classPTK_1_1Mercury_1_1PSRMessenger_af0315299ebab5499ef6e9d483e6d9873}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!listLoggers@{listLoggers}}
+\index{listLoggers@{listLoggers}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{listLoggers()}{listLoggers()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::list\+Loggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lista os loggers registrados.
+
+\begin{DoxyReturn}{Retorna}
+array$<$\+Logger\+Interface$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a0dd3db7cc140196a6df119c5c114701c}\label{classPTK_1_1Mercury_1_1PSRMessenger_a0dd3db7cc140196a6df119c5c114701c}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!notify@{notify}}
+\index{notify@{notify}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::notify (\begin{DoxyParamCaption}\item[{string}]{\$level,  }\item[{}]{\$message,  }\item[{array}]{\$context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Envia a mensagem para os loggers.
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+string & {\em \$level} & \\
+\hline
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a50c0d6170b822841d3c55e20fc258fff}\label{classPTK_1_1Mercury_1_1PSRMessenger_a50c0d6170b822841d3c55e20fc258fff}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!registerLogger@{registerLogger}}
+\index{registerLogger@{registerLogger}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{registerLogger()}{registerLogger()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::register\+Logger (\begin{DoxyParamCaption}\item[{Logger\+Interface}]{\$logger,  }\item[{string}]{\$logger\+Id = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Registra um logger para receber as mensagens.
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+Logger\+Interface & {\em \$logger} & \\
+\hline
+string & {\em \$logger\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger}{P\+S\+R\+Messenger}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a2fa6c9bfc00e51f2b47163a49f006c87}\label{classPTK_1_1Mercury_1_1PSRMessenger_a2fa6c9bfc00e51f2b47163a49f006c87}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendAlert@{sendAlert}}
+\index{sendAlert@{sendAlert}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendAlert()}{sendAlert()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Alert (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_aa2bc99e61d321a9da6f0cd05e1d2a882}\label{classPTK_1_1Mercury_1_1PSRMessenger_aa2bc99e61d321a9da6f0cd05e1d2a882}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendCritical@{sendCritical}}
+\index{sendCritical@{sendCritical}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendCritical()}{sendCritical()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Critical (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a8c93e6fda7d2ddfd378ff6664a914094}\label{classPTK_1_1Mercury_1_1PSRMessenger_a8c93e6fda7d2ddfd378ff6664a914094}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendDebug@{sendDebug}}
+\index{sendDebug@{sendDebug}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendDebug()}{sendDebug()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Debug (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a9d28375cb4a65ce29af4ef902a143701}\label{classPTK_1_1Mercury_1_1PSRMessenger_a9d28375cb4a65ce29af4ef902a143701}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendEmergency@{sendEmergency}}
+\index{sendEmergency@{sendEmergency}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendEmergency()}{sendEmergency()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Emergency (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a2dc390f64810054d278e9ba6d521c6c4}\label{classPTK_1_1Mercury_1_1PSRMessenger_a2dc390f64810054d278e9ba6d521c6c4}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendError@{sendError}}
+\index{sendError@{sendError}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendError()}{sendError()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Error (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a4b517dfb795eee0bd10fb8f25b1df28d}\label{classPTK_1_1Mercury_1_1PSRMessenger_a4b517dfb795eee0bd10fb8f25b1df28d}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendInfo@{sendInfo}}
+\index{sendInfo@{sendInfo}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendInfo()}{sendInfo()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Info (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_ae08d5c0ec5f473f1a606040e5da13c63}\label{classPTK_1_1Mercury_1_1PSRMessenger_ae08d5c0ec5f473f1a606040e5da13c63}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendNotice@{sendNotice}}
+\index{sendNotice@{sendNotice}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendNotice()}{sendNotice()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Notice (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a8828113f658f12f3d8f002f70dd6fe67}\label{classPTK_1_1Mercury_1_1PSRMessenger_a8828113f658f12f3d8f002f70dd6fe67}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!sendWarning@{sendWarning}}
+\index{sendWarning@{sendWarning}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{sendWarning()}{sendWarning()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::send\+Warning (\begin{DoxyParamCaption}\item[{}]{\$message,  }\item[{array}]{\$context = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+mixed & {\em \$message} & \\
+\hline
+ & {\em array$<$mixed$>$} & \$context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPTK_1_1Mercury_1_1PSRMessenger_a88a2e5866477b0d7e953d6a4465fa995}\label{classPTK_1_1Mercury_1_1PSRMessenger_a88a2e5866477b0d7e953d6a4465fa995}} 
+\index{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}!unregisterLogger@{unregisterLogger}}
+\index{unregisterLogger@{unregisterLogger}!PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger@{PTK\textbackslash{}Mercury\textbackslash{}PSRMessenger}}
+\doxysubsubsection{\texorpdfstring{unregisterLogger()}{unregisterLogger()}}
+{\footnotesize\ttfamily P\+T\+K\textbackslash{}\+Mercury\textbackslash{}\+P\+S\+R\+Messenger\+::unregister\+Logger (\begin{DoxyParamCaption}\item[{string}]{\$logger\+Id }\end{DoxyParamCaption})}
+
+Remove um logger da lista de loggers registrados.
+
+
+\begin{DoxyParams}[1]{Parâmetros}
+string & {\em \$logger\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classPTK_1_1Mercury_1_1PSRMessenger}{P\+S\+R\+Messenger}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em Out\+Of\+Bounds\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+src/P\+S\+R\+Messenger.\+php\end{DoxyCompactItemize}
