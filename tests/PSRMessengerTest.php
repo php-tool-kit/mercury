@@ -160,7 +160,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[alert]\tHello world");
-        $messenger->sendAlert($message);
+        $messenger->alert($message);
     }
     
     public function testCritical()
@@ -174,7 +174,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[critical]\tHello world");
-        $messenger->sendCritical($message);
+        $messenger->critical($message);
     }
     
     public function testDebugActive()
@@ -188,7 +188,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[debug]\tHello world");
-        $messenger->sendDebug($message);
+        $messenger->debug($message);
     }
     
     public function testDebugInactive()
@@ -202,7 +202,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString('');
-        $messenger->sendDebug($message);
+        $messenger->debug($message);
     }
     
     public function testEmergency()
@@ -216,7 +216,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[emergency]\tHello world");
-        $messenger->sendEmergency($message);
+        $messenger->emergency($message);
     }
 
     public function testError()
@@ -230,7 +230,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[error]\tHello world");
-        $messenger->sendError($message);
+        $messenger->error($message);
     }
 
     public function testInfo()
@@ -244,7 +244,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[info]\tHello world");
-        $messenger->sendInfo($message);
+        $messenger->info($message);
     }
 
     public function testNotice()
@@ -258,7 +258,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[notice]\tHello world");
-        $messenger->sendNotice($message);
+        $messenger->notice($message);
     }
 
     public function testWarning()
@@ -272,7 +272,7 @@ class PSRMessengerTest extends PHPUnit\Framework\TestCase
         $message = 'Hello world';
         
         $this->expectOutputString("[warning]\tHello world");
-        $messenger->sendWarning($message);
+        $messenger->warning($message);
     }
 
 }

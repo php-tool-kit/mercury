@@ -144,7 +144,7 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    protected function notify(string $level, $message, array $context): void
+    public function log(string $level, $message, array $context): void
     {
         foreach ($this->loggers as $logger) {
             $logger->log($level, $message, $context);
@@ -157,9 +157,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendAlert($message, array $context = []): void
+    public function alert($message, array $context = []): void
     {
-        $this->notify(LogLevel::ALERT, $message, $context);
+        $this->log(LogLevel::ALERT, $message, $context);
     }
 
     /**
@@ -168,9 +168,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendCritical($message, array $context = []): void
+    public function critical($message, array $context = []): void
     {
-        $this->notify(LogLevel::CRITICAL, $message, $context);
+        $this->log(LogLevel::CRITICAL, $message, $context);
     }
 
     /**
@@ -179,14 +179,14 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendDebug($message, array $context = []): void
+    public function debug($message, array $context = []): void
     {
         //só emite a mensagem se o modo debug estiver ativado.
         if (
             key_exists('DEBUG', $this->environment) === true
             && $this->environment['DEBUG'] === true
         ) {
-            $this->notify(LogLevel::DEBUG, $message, $context);
+            $this->log(LogLevel::DEBUG, $message, $context);
         }
     }
 
@@ -196,9 +196,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendEmergency($message, array $context = []): void
+    public function emergency($message, array $context = []): void
     {
-        $this->notify(LogLevel::EMERGENCY, $message, $context);
+        $this->log(LogLevel::EMERGENCY, $message, $context);
     }
 
     /**
@@ -207,9 +207,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendError($message, array $context = []): void
+    public function error($message, array $context = []): void
     {
-        $this->notify(LogLevel::ERROR, $message, $context);
+        $this->log(LogLevel::ERROR, $message, $context);
     }
 
     /**
@@ -218,9 +218,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendInfo($message, array $context = []): void
+    public function info($message, array $context = []): void
     {
-        $this->notify(LogLevel::INFO, $message, $context);
+        $this->log(LogLevel::INFO, $message, $context);
     }
 
     /**
@@ -229,9 +229,9 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendNotice($message, array $context = []): void
+    public function notice($message, array $context = []): void
     {
-        $this->notify(LogLevel::NOTICE, $message, $context);
+        $this->log(LogLevel::NOTICE, $message, $context);
     }
 
     /**
@@ -240,8 +240,8 @@ class PSRMessenger
      * @param array<mixed> $context
      * @return void
      */
-    public function sendWarning($message, array $context = []): void
+    public function warning($message, array $context = []): void
     {
-        $this->notify(LogLevel::WARNING, $message, $context);
+        $this->log(LogLevel::WARNING, $message, $context);
     }
 }
