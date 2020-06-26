@@ -41,6 +41,6 @@
         "cpd": "@copy-paste-detect",
         "mess": "@mess-detect",
         "stan": "@static-analyse",
-        "doc": "php phpDocumentor.phar run --target=docs --directory=src --title='Mercury Log Helper' --defaultpackagename=PTK\\Mercury --sourcecode --progressbar --parseprivate --template='clean'"
+        "doc": "doxygen Doxyfile"
     }
 }

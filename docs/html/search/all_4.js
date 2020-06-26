@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['listloggers_4',['listLoggers',['../classPTK_1_1Mercury_1_1PSRMessenger.html#af0315299ebab5499ef6e9d483e6d9873',1,'PTK::Mercury::PSRMessenger']]]
+  ['emergency_5',['emergency',['../classPTK_1_1Mercury_1_1PSRMessenger.html#a0f8012225b876d296d52907e31450627',1,'PTK::Mercury::PSRMessenger']]],
+  ['error_6',['error',['../classPTK_1_1Mercury_1_1PSRMessenger.html#a6c8d9b8bae8fcf2f02bdfea3b7167992',1,'PTK::Mercury::PSRMessenger']]]
 ];

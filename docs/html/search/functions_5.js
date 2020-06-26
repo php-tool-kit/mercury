@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notify_25',['notify',['../classPTK_1_1Mercury_1_1PSRMessenger.html#a0dd3db7cc140196a6df119c5c114701c',1,'PTK::Mercury::PSRMessenger']]]
+  ['getlogger_27',['getLogger',['../classPTK_1_1Mercury_1_1PSRMessenger.html#ac66e973353e6781a6509bed595b3cc94',1,'PTK::Mercury::PSRMessenger']]]
 ];
