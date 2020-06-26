@@ -39,7 +39,7 @@ use PTK\Uid\Uid;
  *
  * @author Everton
  */
-class PSRMessenger
+class PSRMessenger implements LoggerInterface
 {
 
     /**
@@ -139,12 +139,12 @@ class PSRMessenger
     /**
      * Envia a mensagem para os loggers.
      *
-     * @param string $level
+     * @param mixed $level
      * @param mixed $message
      * @param array<mixed> $context
      * @return void
      */
-    public function log(string $level, $message, array $context): void
+    public function log($level, $message, array $context = []): void
     {
         foreach ($this->loggers as $logger) {
             $logger->log($level, $message, $context);
