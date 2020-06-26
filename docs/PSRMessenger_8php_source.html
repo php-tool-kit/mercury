@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+		<meta name="generator" content="Doxygen 1.8.17"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Mercury: Código-Fonte de src/PSRMessenger.php</title>
+		<link href="tabs.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="dynsections.js"></script>
+		<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+		<link href="doxygen.css" rel="stylesheet" type="text/css" />
+		<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="custom_dark_theme.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+	<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+		<div id="titlearea">
+			<table cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr style="height: 56px;">
+						<td id="projectalign" style="padding-left: 0.5em;">
+							<div id="projectname">Mercury
+								&#160;<span id="projectnumber">1.0.0</span>
+							</div>
+							<div id="projectbrief">Multi logger manager.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- end header part --><!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PSRMessenger.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PSRMessenger_8php.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * The MIT License</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Copyright 2020 Everton.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacePTK_1_1Mercury.html">PTK\Mercury</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;use Psr\Log\LoggerInterface;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;use Psr\Log\LogLevel;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;use PTK\Exceptlion\Value\OutOfBoundsException;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;use PTK\Uid\Uid;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html">PSRMessenger</a> <span class="keyword">implements</span> LoggerInterface</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2dfdd2d59391ea1669e041f26dffc887">   49</a></span>&#160;    <span class="keyword">private</span> array <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2dfdd2d59391ea1669e041f26dffc887">$environment</a> = [];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a8a4b5a4c27dda5d35e8327d135825a65">   55</a></span>&#160;    <span class="keyword">private</span> array <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a8a4b5a4c27dda5d35e8327d135825a65">$loggers</a> = [];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a25e557b46e9e08c4eb7955b269a36c7a">   63</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a25e557b46e9e08c4eb7955b269a36c7a">__construct</a>(array <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2dfdd2d59391ea1669e041f26dffc887">$environment</a> = [])</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        $this-&gt;environment = <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2dfdd2d59391ea1669e041f26dffc887">$environment</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a50c0d6170b822841d3c55e20fc258fff">   75</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a50c0d6170b822841d3c55e20fc258fff">registerLogger</a>(LoggerInterface $logger, <span class="keywordtype">string</span> $loggerId = <span class="stringliteral">&#39;&#39;</span>): <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html">PSRMessenger</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span> ($loggerId === <span class="stringliteral">&#39;&#39;</span>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            $loggerId = Uid::text(8);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        $this-&gt;loggers[$loggerId] = $logger;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#af0315299ebab5499ef6e9d483e6d9873">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#af0315299ebab5499ef6e9d483e6d9873">listLoggers</a>(): array</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a8a4b5a4c27dda5d35e8327d135825a65">$this-&gt;loggers</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a88a2e5866477b0d7e953d6a4465fa995">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a88a2e5866477b0d7e953d6a4465fa995">unregisterLogger</a>(<span class="keywordtype">string</span> $loggerId): <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html">PSRMessenger</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> ($this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#acdedc277bf16469968414d40d57e8ac4">hasLogger</a>($loggerId) === <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> OutOfBoundsException($loggerId, array_keys($this-&gt;loggers));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        unset($this-&gt;loggers[$loggerId]);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> $this;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#ac66e973353e6781a6509bed595b3cc94">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#ac66e973353e6781a6509bed595b3cc94">getLogger</a>(<span class="keywordtype">string</span> $loggerId): LoggerInterface</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> ($this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#acdedc277bf16469968414d40d57e8ac4">hasLogger</a>($loggerId) === <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> OutOfBoundsException($loggerId, array_keys($this-&gt;loggers));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> $this-&gt;loggers[$loggerId];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#acdedc277bf16469968414d40d57e8ac4">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#acdedc277bf16469968414d40d57e8ac4">hasLogger</a>(<span class="keywordtype">string</span> $loggerId): bool</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">return</span> key_exists($loggerId, $this-&gt;loggers);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">  147</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>($level, $message, array $context = []): void</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">foreach</span> ($this-&gt;loggers as $logger) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            $logger-&gt;log($level, $message, $context);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a195148590487916f7ed6e1288bb3ef78">  160</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a195148590487916f7ed6e1288bb3ef78">alert</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::ALERT, $message, $context);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a31def1adca0c773b78a356c6eed196f1">  171</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a31def1adca0c773b78a356c6eed196f1">critical</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::CRITICAL, $message, $context);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6d54fd5cea08f7f956030c1730d96063">  182</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6d54fd5cea08f7f956030c1730d96063">debug</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">//só emite a mensagem se o modo debug estiver ativado.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            key_exists(<span class="stringliteral">&#39;DEBUG&#39;</span>, $this-&gt;environment) === <span class="keyword">true</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            &amp;&amp; $this-&gt;environment[<span class="stringliteral">&#39;DEBUG&#39;</span>] === <span class="keyword">true</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        ) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::DEBUG, $message, $context);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a0f8012225b876d296d52907e31450627">  199</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a0f8012225b876d296d52907e31450627">emergency</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::EMERGENCY, $message, $context);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6c8d9b8bae8fcf2f02bdfea3b7167992">  210</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6c8d9b8bae8fcf2f02bdfea3b7167992">error</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::ERROR, $message, $context);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#aa2451794fe3cbe500deaf6bb4855b0d3">  221</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#aa2451794fe3cbe500deaf6bb4855b0d3">info</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::INFO, $message, $context);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a1e6f4b6f02197355869854acaab566b0">  232</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a1e6f4b6f02197355869854acaab566b0">notice</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::NOTICE, $message, $context);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classPTK_1_1Mercury_1_1PSRMessenger.html#ae82d273d105b385323d5e85f9f82cdd3">  243</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#ae82d273d105b385323d5e85f9f82cdd3">warning</a>($message, array $context = []): void</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        $this-&gt;<a class="code" href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">log</a>(LogLevel::WARNING, $message, $context);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a25e557b46e9e08c4eb7955b269a36c7a"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a25e557b46e9e08c4eb7955b269a36c7a">PTK\Mercury\PSRMessenger\__construct</a></div><div class="ttdeci">__construct(array $environment=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00063">PSRMessenger.php:63</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a6c8d9b8bae8fcf2f02bdfea3b7167992"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6c8d9b8bae8fcf2f02bdfea3b7167992">PTK\Mercury\PSRMessenger\error</a></div><div class="ttdeci">error($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00210">PSRMessenger.php:210</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a8a4b5a4c27dda5d35e8327d135825a65"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a8a4b5a4c27dda5d35e8327d135825a65">PTK\Mercury\PSRMessenger\$loggers</a></div><div class="ttdeci">array $loggers</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00055">PSRMessenger.php:55</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a2dfdd2d59391ea1669e041f26dffc887"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2dfdd2d59391ea1669e041f26dffc887">PTK\Mercury\PSRMessenger\$environment</a></div><div class="ttdeci">array $environment</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00049">PSRMessenger.php:49</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a6d54fd5cea08f7f956030c1730d96063"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a6d54fd5cea08f7f956030c1730d96063">PTK\Mercury\PSRMessenger\debug</a></div><div class="ttdeci">debug($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00182">PSRMessenger.php:182</a></div></div>
+<div class="ttc" id="anamespacePTK_1_1Mercury_html"><div class="ttname"><a href="namespacePTK_1_1Mercury.html">PTK\Mercury</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a2855e0a3a44515e103582406050c56e7"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a2855e0a3a44515e103582406050c56e7">PTK\Mercury\PSRMessenger\log</a></div><div class="ttdeci">log($level, $message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00147">PSRMessenger.php:147</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a88a2e5866477b0d7e953d6a4465fa995"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a88a2e5866477b0d7e953d6a4465fa995">PTK\Mercury\PSRMessenger\unregisterLogger</a></div><div class="ttdeci">unregisterLogger(string $loggerId)</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00101">PSRMessenger.php:101</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a0f8012225b876d296d52907e31450627"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a0f8012225b876d296d52907e31450627">PTK\Mercury\PSRMessenger\emergency</a></div><div class="ttdeci">emergency($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00199">PSRMessenger.php:199</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html">PTK\Mercury\PSRMessenger</a></div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00042">PSRMessenger.php:42</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a1e6f4b6f02197355869854acaab566b0"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a1e6f4b6f02197355869854acaab566b0">PTK\Mercury\PSRMessenger\notice</a></div><div class="ttdeci">notice($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00232">PSRMessenger.php:232</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_ac66e973353e6781a6509bed595b3cc94"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#ac66e973353e6781a6509bed595b3cc94">PTK\Mercury\PSRMessenger\getLogger</a></div><div class="ttdeci">getLogger(string $loggerId)</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00119">PSRMessenger.php:119</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a195148590487916f7ed6e1288bb3ef78"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a195148590487916f7ed6e1288bb3ef78">PTK\Mercury\PSRMessenger\alert</a></div><div class="ttdeci">alert($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00160">PSRMessenger.php:160</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_ae82d273d105b385323d5e85f9f82cdd3"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#ae82d273d105b385323d5e85f9f82cdd3">PTK\Mercury\PSRMessenger\warning</a></div><div class="ttdeci">warning($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00243">PSRMessenger.php:243</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a31def1adca0c773b78a356c6eed196f1"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a31def1adca0c773b78a356c6eed196f1">PTK\Mercury\PSRMessenger\critical</a></div><div class="ttdeci">critical($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00171">PSRMessenger.php:171</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_acdedc277bf16469968414d40d57e8ac4"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#acdedc277bf16469968414d40d57e8ac4">PTK\Mercury\PSRMessenger\hasLogger</a></div><div class="ttdeci">hasLogger(string $loggerId)</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00134">PSRMessenger.php:134</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_a50c0d6170b822841d3c55e20fc258fff"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#a50c0d6170b822841d3c55e20fc258fff">PTK\Mercury\PSRMessenger\registerLogger</a></div><div class="ttdeci">registerLogger(LoggerInterface $logger, string $loggerId='')</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00075">PSRMessenger.php:75</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_aa2451794fe3cbe500deaf6bb4855b0d3"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#aa2451794fe3cbe500deaf6bb4855b0d3">PTK\Mercury\PSRMessenger\info</a></div><div class="ttdeci">info($message, array $context=[])</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00221">PSRMessenger.php:221</a></div></div>
+<div class="ttc" id="aclassPTK_1_1Mercury_1_1PSRMessenger_html_af0315299ebab5499ef6e9d483e6d9873"><div class="ttname"><a href="classPTK_1_1Mercury_1_1PSRMessenger.html#af0315299ebab5499ef6e9d483e6d9873">PTK\Mercury\PSRMessenger\listLoggers</a></div><div class="ttdeci">listLoggers()</div><div class="ttdef"><b>Definition:</b> <a href="PSRMessenger_8php_source.html#l00089">PSRMessenger.php:89</a></div></div>
+<!-- start footer part -->
+		<script src="custom.js"></script>
+	</body>
+</html>
